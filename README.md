@@ -11,4 +11,6 @@ For a controller from performance perspective, there are usually the following i
 6- controller effort - is important in terms of: used/required energy/electricity, large control effort can lead to saturation in actuators or nonlinear control signals 
 7- stability margins - phase and gain in Bode criteria and disk margin in Nyquist - complementary layer to stability is robustness 0 e.g., a maximum peak overshoot shows NON_Robust behavior (due to an intenral or external distrubance sys can easily become unstable).
 8- Sensitivity -> S+T=1; meaning how sensitive is the system to noise, to plant disturbances ...; S = 1/ (1+C*P);  -> high sensitivity means Aggreeeive controller and less Robust. 
-9- BandWidth (BW) -> 
+9- BandWidth (BW) -> is a measure of how fast the system is in tracking any changes in the input. high BW usually is desired meaning up to which frequency the contrller can track the input well enough. 
+BW is the crossover frequency at which the magnitude crossses 0 dB or -3 dB. Here is a bit of cnfusion between BW versus stability (Bode criteria); positive gain is a bit dangerous for stability (if the cprresponding phase is below -180 we are UNSTABLE!). 
+But as long as the phase is bigger than the -180 degrees, even positive magnitude is safe. and phase shift usually happens at higher frequnecies. so having high gain at LF secures good BW while not encountering stability risks. at BW cross freq. the ratio of the signal over thesecond one is almost half meaning 70% in dB.  
