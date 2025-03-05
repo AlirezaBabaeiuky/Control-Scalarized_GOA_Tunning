@@ -14,3 +14,9 @@ For a controller from performance perspective, there are usually the following i
 9- BandWidth (BW) -> is a measure of how fast the system is in tracking any changes in the input. high BW usually is desired meaning up to which frequency the contrller can track the input well enough. 
 BW is the crossover frequency at which the magnitude crossses 0 dB or -3 dB. Here is a bit of cnfusion between BW versus stability (Bode criteria); positive gain is a bit dangerous for stability (if the cprresponding phase is below -180 we are UNSTABLE!). 
 But as long as the phase is bigger than the -180 degrees, even positive magnitude is safe. and phase shift usually happens at higher frequnecies. so having high gain at LF secures good BW while not encountering stability risks. at BW cross freq. the ratio of the signal over thesecond one is almost half meaning 70% in dB.  
+Sensitivity, BW, stability are more of frequency response analysis; while the rest is of more of time-domain response analysis. 
+---
+Using Geneti calgorithm (scripted the entire Genetic Optimization Algorithm in MATLAB without using any built-in functions), SMC and PID control gains are tuned to minimze the steady-state error. 
+Multi-objective optimization problems are essentially opimization problems where there are multiple objectives to meet and usually such objectives are conflicting goals. In such a case trade-off methods are adopted. 
+In the discipline of optimization, Pareto solutions and Scalarized methods are common. I have scripted a Fractional-Order Quadratic Objective function to be optimized by Genetic algorithms:
+
