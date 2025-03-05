@@ -18,5 +18,8 @@ Sensitivity, BW, stability are more of frequency response analysis; while the re
 ---
 Using Geneti calgorithm (scripted the entire Genetic Optimization Algorithm in MATLAB without using any built-in functions), SMC and PID control gains are tuned to minimze the steady-state error. 
 Multi-objective optimization problems are essentially opimization problems where there are multiple objectives to meet and usually such objectives are conflicting goals. In such a case trade-off methods are adopted. 
-In the discipline of optimization, Pareto solutions and Scalarized methods are common. I have scripted a Fractional-Order Quadratic Objective function to be optimized by Genetic algorithms:
+In the discipline of optimization, Pareto solutions and Scalarized methods are common. I have scripted a Fractional-Order Quadratic Objective function to be optimized by Genetic algorithms: (check the Sphere2.m) 
+Scalarized Quadratic optimization is a type of multi-objective problem at which the importance of each objective function is prioritized with respect to the given weights. I prioritized the ess (offset) more than the MP (overshoot); so W_ess = 2 and W_Mp = 1; 
+Also one important note is that since the ess is alsways a number between 0 and 1 (with 0 the ideal case), fractional-order quadratic is adopted instead of regular quadratic optimization. If regular quadratic is used, the performance index (objective function) will
+ignore/underestimate the importance of the ess or Mp. (0.5^2=0.25 but 0.5^1/2=0.707107).  
 
