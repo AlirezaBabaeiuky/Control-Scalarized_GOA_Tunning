@@ -22,4 +22,12 @@ In the discipline of optimization, Pareto solutions and Scalarized methods are c
 Scalarized Quadratic optimization is a type of multi-objective problem at which the importance of each objective function is prioritized with respect to the given weights. I prioritized the ess (offset) more than the MP (overshoot); so W_ess = 2 and W_Mp = 1; 
 Also one important note is that since the ess is alsways a number between 0 and 1 (with 0 the ideal case), fractional-order quadratic is adopted instead of regular quadratic optimization. If regular quadratic is used, the performance index (objective function) will
 ignore/underestimate the importance of the ess or Mp. (0.5^2=0.25 but 0.5^1/2=0.707107).  
+Maxiumum iteration of the GA is set to 50 (bigger numbers lead to computational costs), and population size of the GA is set to 20. Mutation ratio is 0.2 (meaning a conservative search) and Crossover ratio us set to 0.8 meaning to roughly reduce the 
+generated offsprings less than the regular size of the parents population. 
+Sphere2.m which holds the Named separate matlab function contains the simulink file that runs the simulations to evaluate the response of the system. Basically, the Genetic Optimization sub-functions and main function are all connected to the simulink file. 
+![image](https://github.com/user-attachments/assets/402e1a98-dceb-4980-b3ac-108d58255f02)
+above figure shows the Genetic Optimization Algorithm's search pattern and how it has evolved through over 550 evaluations to find the mnimum scalarized multi-objective function. 
+
+
+
 
