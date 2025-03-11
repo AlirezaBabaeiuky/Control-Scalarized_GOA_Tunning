@@ -37,6 +37,9 @@ Obviously larger numbers lead to more computational costs. Best approach is to d
 Among different selections of Genetic algorithms, I have adopted Tournament type. GA selection approach is to select the TWO parents to start off with.   
 Multi-objective (performance index) is to minimize the steady-state offset and minimize the maximum peak overshoot. But minimizing both these indices is a conflicting goal (usually, increasing Ki address offset but to the cost of increased overshoot). 
 Results found by the Genetic Algorithm Optimization are: Best.Solution []; %[Kp Ki, Kd];  
+Input is unit step. 
+![image](https://github.com/user-attachments/assets/8fb20c4b-68c0-4794-a11b-449b0ca1d363)
+
 
 
 
