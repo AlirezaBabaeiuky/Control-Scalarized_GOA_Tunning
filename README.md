@@ -39,7 +39,8 @@ Multi-objective (performance index) is to minimize the steady-state offset and m
 Results found by the Genetic Algorithm Optimization are: Best.Solution []; %[Kp Ki, Kd];  
 Input is unit step. 
 ![image](https://github.com/user-attachments/assets/8fb20c4b-68c0-4794-a11b-449b0ca1d363)
-
+![image](https://github.com/user-attachments/assets/2323504f-1ad2-45f5-9264-5c9c5112a610)
+Above figure is the step response using Genetic optimization values: kp=1.005372113381111e+06, Ki=6.099880907616890e+02, Kd=1.015484538116490e+03
 
 
 
