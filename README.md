@@ -1,5 +1,6 @@
 # Control-Scalarized_GOA_Tunning
 In this repository, Multi-objective Genetic Algorithm based optimization is adopted to tune a controller. 
+---
 Optimization techniques like Genetic-based algorithms derive the Genetic operations to yield the optimal result in a given optinmzation problem. 
 In the realm  of controller tunning, finding the most optimal / optimum gains is of main concern. While, trial-error can be used here, it is tried to establish a standard way-of-working in this field to tune the controller gains. 
 For a controller from performance perspective, there are usually the following items ti be considered:
