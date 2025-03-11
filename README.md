@@ -28,6 +28,16 @@ generated offsprings less than the regular size of the parents population.
 Sphere2.m which holds the Named separate matlab function contains the simulink file that runs the simulations to evaluate the response of the system. Basically, the Genetic Optimization sub-functions and main function are all connected to the simulink file. 
 ![image](https://github.com/user-attachments/assets/402e1a98-dceb-4980-b3ac-108d58255f02)
 above figure shows the Genetic Optimization Algorithm's search pattern and how it has evolved through over 550 evaluations to find the mnimum scalarized multi-objective function. 
+---
+Crossover percentage = 0.8; Crossover in GA is the process of combining Genetic material from 2 parents to create new offspring. It mimics biological reproduction and helps in exploring the search space. 
+Original population size = 50, and with Crossover percentage of: 0.8; it will yield 40 foe next population sizes. 
+Mutation percentage is = 0.3; Mutants are the offsprings produced by applying random mutations to individuals in the population. This helps in maintaining diversity and prevents premature convergence.
+Gamma = 0.05; this is crossover rate; is the parameter to control the crossover variation. It adjusts how far offspring genes deviate from parent genes during crossover.   
+Mu = 0.02; this is mutation rate; it adjusts the probability of mutating each gene within an individual. 
+Maximum iteration considered for this Scalarized-Genetic_/algorithm-Optimization is: 100
+Obviously larger numbers lead to more computational costs. Best approach is to do several trial-errors to find the best achievable PID control gains, then feed 30% below and above such numbers as Variable limits to the Genetic optimization algorithm to find the best in between. 
+Among different selections of Genetic algorithms, I have adopted Tournament type. GA selection approach is to select the TWO parents to start off with.   
+
 
 
 
