@@ -35,7 +35,8 @@ Mu = 0.02; this is mutation rate; it adjusts the probability of mutating each ge
 Maximum iteration considered for this Scalarized-Genetic_/algorithm-Optimization is: 100
 Obviously larger numbers lead to more computational costs. Best approach is to do several trial-errors to find the best achievable PID control gains, then feed 30% below and above such numbers as Variable limits to the Genetic optimization algorithm to find the best in between. 
 Among different selections of Genetic algorithms, I have adopted Tournament type. GA selection approach is to select the TWO parents to start off with.   
-
+Multi-objective (performance index) is to minimize the steady-state offset and minimize the maximum peak overshoot. But minimizing both these indices is a conflicting goal (usually, increasing Ki address offset but to the cost of increased overshoot). 
+Results found by the Genetic Algorithm Optimization are: Best.Solution []; %[Kp Ki, Kd];  
 
 
 
