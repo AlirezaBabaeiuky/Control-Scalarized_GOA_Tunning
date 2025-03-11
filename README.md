@@ -16,7 +16,6 @@ For a controller from performance perspective, there are usually the following i
 BW is the crossover frequency at which the magnitude crossses 0 dB or -3 dB. Here is a bit of cnfusion between BW versus stability (Bode criteria); positive gain is a bit dangerous for stability (if the cprresponding phase is below -180 we are UNSTABLE!). 
 But as long as the phase is bigger than the -180 degrees, even positive magnitude is safe. and phase shift usually happens at higher frequnecies. so having high gain at LF secures good BW while not encountering stability risks. at BW cross freq. the ratio of the signal over thesecond one is almost half meaning 70% in dB.  
 Sensitivity, BW, stability are more of frequency response analysis; while the rest is of more of time-domain response analysis. 
----
 Using Geneti calgorithm (scripted the entire Genetic Optimization Algorithm in MATLAB without using any built-in functions), SMC and PID control gains are tuned to minimze the steady-state error. 
 Multi-objective optimization problems are essentially opimization problems where there are multiple objectives to meet and usually such objectives are conflicting goals. In such a case trade-off methods are adopted. 
 In the discipline of optimization, Pareto solutions and Scalarized methods are common. I have scripted a Fractional-Order Quadratic Objective function to be optimized by Genetic algorithms: (check the Sphere2.m) 
@@ -28,7 +27,6 @@ generated offsprings less than the regular size of the parents population.
 Sphere2.m which holds the Named separate matlab function contains the simulink file that runs the simulations to evaluate the response of the system. Basically, the Genetic Optimization sub-functions and main function are all connected to the simulink file. 
 ![image](https://github.com/user-attachments/assets/402e1a98-dceb-4980-b3ac-108d58255f02)
 above figure shows the Genetic Optimization Algorithm's search pattern and how it has evolved through over 550 evaluations to find the mnimum scalarized multi-objective function. 
----
 Crossover percentage = 0.8; Crossover in GA is the process of combining Genetic material from 2 parents to create new offspring. It mimics biological reproduction and helps in exploring the search space. 
 Original population size = 50, and with Crossover percentage of: 0.8; it will yield 40 foe next population sizes. 
 Mutation percentage is = 0.3; Mutants are the offsprings produced by applying random mutations to individuals in the population. This helps in maintaining diversity and prevents premature convergence.
